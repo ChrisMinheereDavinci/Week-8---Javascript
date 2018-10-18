@@ -15,7 +15,7 @@ var totaalPrijs = 0;
 
 
 function addToOrder() {
-    var keuze = prompt('Place Order kies uit:   firs, bier of wijn');//prompt asks for a drink
+    var keuze = prompt('Place Order____kies uit:   firs---bier---wijn of Stop om de bon te printen');//prompt asks for a drink
     if (keuze == "fris") {
         aantalFris = parseInt(prompt('Voer het aantal Fris in dat je wilt bestellen.')); //prompt asks the amound of drinks
         console.log(aantalFris);
@@ -24,11 +24,10 @@ function addToOrder() {
         totaalFris = aantalFris * fris; //calculates the total price and stores it in a 'Var' called 'totaalFris'
         addToOrder();
     }
-
     else if (keuze == "bier") {
         aantalBier = parseInt(prompt('Voer het aantal Bier in dat je wilt bestellen.')); //prompt asks the amound of drinks
         console.log(aantalBier);
-        document.write("Bier:  " + aantalBier + "<br>"); 
+        document.write("Bier:  " + aantalBier + "<br>");
         document.write("€" + aantalBier * bier + "<br><hr><p>");
         totaalBier = aantalBier * bier; //calculates the total price and stores it in a 'Var' called 'totaalBier'
         addToOrder();
