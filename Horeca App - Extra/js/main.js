@@ -1,3 +1,10 @@
+// Made By: Chris Minheere 
+// 18-10-2018
+// Horeca App
+
+// Bronnen:
+// W3School.com
+//stackoverflow.com
 
 const fris = 2.50;
 const bier = 3.00;
@@ -5,6 +12,7 @@ const wijn = 3.50;
 
 const snack8 = 6.50;
 const snack16 = 12.5;
+
 var aantalSnack = 0;
 var aantalSchalen = 0;
 
@@ -63,12 +71,11 @@ function addToOrder() {
         document.write("<hr>");
         document.getElementById("totaalPrijs").innerHTML = ("€" + totaalPrijs);
     }
-    else {
+    else { //shows an allert when an unexpected value is entered, then returns to the beginning of the function.
         alert("Uw kan dit niet bestellen.");
         addToOrder();
     }
 }
-
 
 function snack1() {
     var aantalSnack = parseInt(prompt('Kies het aantal snacks. 8 of 16')); //prompt asks for snacks
@@ -88,18 +95,16 @@ function snack1() {
         totaalSnack = aantalSchalen * snack16; //calculates the total price and stores it in a 'Var' called 'totaalSnack'
         console.log(aantalSnack);
         console.log(totaalSnack);
-        document.getElementById("aantalSnack").innerHTML = ("Aantal Snack's  " + aantalSnack);
-        document.getElementById("aantalSchalen").innerHTML = ("Aantal snack schalen  " + aantalSchalen);
-        document.getElementById("totaalSnack").innerHTML = ("€" + totaalSnack);
+        document.getElementById("aantalSnack").innerHTML = ("Aantal Snack's  " + aantalSnack); //stores the value in an 'Id'
+        document.getElementById("aantalSchalen").innerHTML = ("Aantal snack schalen  " + aantalSchalen); //stores the value in an 'Id'
+        document.getElementById("totaalSnack").innerHTML = ("€" + totaalSnack); //stores the value in an 'Id'
         addToOrder();
     }
 
-    else {
+    else { //shows an allert when an unexpected value is entered, then returns to the beginning of the function.
         alert("Uw kan dit niet bestellen.");
         snack1();
     }
 }
-
-
 
 addToOrder();
