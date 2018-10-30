@@ -21,7 +21,7 @@ while (type != 'stop') {
 
     if (type == 'fris') {
         aantalFris = aantalFris + amount;
-        addToOrder('fris', amount);
+        
     }
 
     if (type == 'bier') {
