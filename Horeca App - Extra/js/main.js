@@ -30,9 +30,9 @@ var totaalPrijs = 0;
 
 
 function addToOrder() {
-    var keuze = prompt('Place Order____kies uit: firs---bier---wijn---snack'); //prompt asks for a drink
+    var keuze = prompt('Place Order____kies uit: fris---bier---wijn---snack'); //prompt asks for a drink
     if (keuze == "fris") {
-        aantalFris = parseInt(prompt('Voer het aantal Fris in dat je wilt bestellen.')); //prompt asks the amound of drinks
+        aantalFris = aantalFris + parseInt(prompt('Voer het aantal Fris in dat je wilt bestellen.')); //prompt asks the amound of drinks
         console.log(aantalFris);
         console.log(totaalFris);
         document.getElementById("aantalFris").innerHTML = (aantalFris);
@@ -42,7 +42,7 @@ function addToOrder() {
     }
 
     else if (keuze == "bier") {
-        aantalBier = parseInt(prompt('Voer het aantal Bier in dat je wilt bestellen.')); //prompt asks the amound of drinks
+        aantalBier = aantalBier + parseInt(prompt('Voer het aantal Bier in dat je wilt bestellen.')); //prompt asks the amound of drinks
         console.log(aantalBier);
         console.log(totaalBier);
         document.getElementById("aantalBier").innerHTML = (aantalBier);
@@ -52,7 +52,7 @@ function addToOrder() {
     }
 
     else if (keuze == "wijn") {
-        aantalWijn = parseInt(prompt('Voer het aantal Wijn in dat je wilt bestellen.'));//prompt asks the amound of drinks
+        aantalWijn = aantalWijn + parseInt(prompt('Voer het aantal Wijn in dat je wilt bestellen.'));//prompt asks the amound of drinks
         console.log(aantalWijn);
         console.log(totaalWijn);
         document.getElementById("aantalWijn").innerHTML = (aantalWijn);
@@ -62,6 +62,8 @@ function addToOrder() {
     }
 
     else if (keuze == "snack") {
+        //welk 
+        //hoeveel
         snack1();
     }
 
