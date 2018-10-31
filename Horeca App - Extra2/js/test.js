@@ -15,22 +15,25 @@ while (type != 'stop') {
     if (type == 'stop') {
         totalAmound()
     }
-    var amount = parseInt(prompt('Voer het aantal Fris in dat je wilt bestellen.'));
-    
+    var amount = parseInt(prompt('Voer het aantal in dat je wilt bestellen.'));
+
     console.log(amount, type);
+
 
     if (type == 'fris') {
         aantalFris = aantalFris + amount;
-        
     }
 
     if (type == 'bier') {
-        addToOrder('bier', amount);
+        aantalBier = aantalBier + amount;
     }
 
     if (type == 'wijn') {
-        addToOrder('wijn', amount);
+        aantalWijn = aantalWijn + amount;
     }
+    // else {
+    //     prompt('dit is een incorete invoer');
+    // }
 }
 
 
@@ -41,5 +44,18 @@ function addToOrder(type, amount) {
 }
 
 function totalAmound() {
+    console.log('Aantal Fris' + aantalFris);
+    console.log(aantalFris * frisPrijs);
+    document.write('Aantal Fris' + aantalFris + '<br>');
+    document.write(aantalFris * frisPrijs + '<br>');
 
+    console.log('Aantal Bier' + aantalBier);
+    console.log(aantalBier * bierPrijs);
+    document.write('Aantal Bier' + '<br>');
+    document.write(aantalBier * bierPrijs + '<br>');
+
+    console.log('Aantal Wijn' + aantalWijn);
+    console.log(aantalWijn * wijnPrijs);
+    document.write('Aantal Wijn' + aantalWijn + '<br>');
+    document.write(aantalWijn * wijnPrijs + '<br>');
 }
